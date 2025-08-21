@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap light" id="page">
+    <div class="calc" role="application" aria-label="Calculator">
+      <div class="topbar">
+        <div class="brand">⚡ Modern Calculator</div>
+        <div class="controls">
+          <button class="btn icon" id="themeBtn" title="Toggle theme" aria-label="Toggle theme">🌓</button>
+          <button class="btn icon" id="copyBtn" title="Copy result" aria-label="Copy result">📋</button>
+          <button class="btn icon danger" id="clearHistBtn" title="Clear history" aria-label="Clear history">🗑️</button>
+        </div>
+      </div>
+
+      <div class="display" id="display" aria-live="polite">
+        <div class="expression" id="expression"></div>
+        <div class="result" id="result">0</div>
+      </div>
+
+      <div class="keypad" id="keypad" aria-label="Keypad">
+        <div class="key util" data-key="AC">AC</div>
+        <div class="key util" data-key="DEL">⌫</div>
+        <div class="key util" data-key="%">%</div>
+        <div class="key op" data-key="/">÷</div>
+
+        <div class="key" data-key="7">7</div>
+        <div class="key" data-key="8">8</div>
+        <div class="key" data-key="9">9</div>
+        <div class="key op" data-key="*">×</div>
+
+        <div class="key" data-key="4">4</div>
+        <div class="key" data-key="5">5</div>
+        <div class="key" data-key="6">6</div>
+        <div class="key op" data-key="-">−</div>
+
+        <div class="key" data-key="1">1</div>
+        <div class="key" data-key="2">2</div>
+        <div class="key" data-key="3">3</div>
+        <div class="key op" data-key="+">+</div>
+
+        <div class="key util" data-key="(">(</div>
+        <div class="key" data-key="0">0</div>
+        <div class="key util" data-key=")">)</div>
+        <div class="key equal" data-key="=">=</div>
+
+        <div class="key util span-2" data-key="±">±</div>
+        <div class="key util" data-key=".">.</div>
+        <div class="key op" data-key="^">^</div>
+      </div>
+
+      <div class="footer">
+        <details id="histPanel">
+          <summary>History</summary>
+          <div class="history" id="history"></div>
+        </details>
+        <div>Keyboard: 0-9 • + − × ÷ • Enter = • Esc AC • Backspace ⌫</div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
